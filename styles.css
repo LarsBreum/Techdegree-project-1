@@ -1,3 +1,7 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css?family=Khula:400,700');
+
+
 /* Global Layout Set-up */
 * { 
   box-sizing: border-box;
@@ -7,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'khula', sans-serif;
   color: #222;
   background: #f7f5f0;
 }
@@ -15,20 +19,19 @@ body {
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #fff;
 }
 a:hover {
-  color: #6633ff;
+  color: #FF9D00;
 }
 
 /* Section Styles */
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: #5f9ab8;
   min-height: 30px;
   padding: 10px;
-  position: fixed;
   text-align: center;
 }
 .nav {
@@ -39,7 +42,10 @@ a:hover {
   margin: 0 auto;
   padding: 0;
 }
+.nav {
+  font-size: 1.24em;
 
+}
 .nav .name {
     display: block;
     margin-right: auto;
@@ -51,14 +57,11 @@ a:hover {
 .nav a {
   transition: all .5s;
 }
-.nav a:hover {
-  color: white
-}
 
 header {
   text-align: center;
-  background: url('images/background.jpg') no-repeat center ;
-  background-size: cover;
+  background: url('images/background.jpg') no-repeat top center fixed;
+  /*background-size: contain;*/
   overflow: hidden;
   padding-top: 60px;
 }
@@ -74,7 +77,8 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+   -webkit-animation: pulse 0.5s;
+    animation: pulse 0.5s; 
 }
 .tag {
   background-color: #efefef;
@@ -83,10 +87,14 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
+  opacity: 0.9;
 } 
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: #5f9ab8;
+  opacity: 0.9;
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 700;
 }
 .card {
   margin: 30px;
@@ -99,7 +107,13 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #FF9D00;
+}
+.card a {
+  color: #FF9D00;  
+}
+.card a:hover {
+  text-decoration: underline; 
 }
 
 ul.skills {
@@ -110,14 +124,24 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #FF9D00;
   color: white;
   padding: 5px 10px;
   margin: 2px;
+
+}
+.skills li:hover {
+   -webkit-animation: pulse 0.5s;
+    animation: pulse 0.5s; 
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #5f9ab8;
+}
+/*img styles*/
+img {
+  max-width: 100%;
+
 }
 
 footer {
@@ -167,6 +191,37 @@ a.social:hover {
   clear: both;
 }
 
+/*HOME PAGE*/
+section.experience {
+  width: 100%;
+  height: 200px;
+  background: url('images/waves.jpg') no-repeat top center fixed;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.section h2 {
+  color: white;
+}
+.overlay {
+  background-color: rgba(95, 154, 184, 0.3);
+  height: 100%;
+  width: 100%;
+}
+
+/*BUTTON*/
+.button {
+  background-color: Orange;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-weight: 700;
+}
+a.button:hover {
+  color: white;
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
@@ -205,4 +260,6 @@ a.social:hover {
   }
 
 }
+
+
 
