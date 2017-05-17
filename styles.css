@@ -32,7 +32,6 @@ a:hover {
   background: #5f9ab8;
   min-height: 30px;
   padding: 10px;
-  position: fixed;
   text-align: center;
 }
 .nav {
@@ -61,8 +60,8 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/background.jpg') no-repeat center ;
-  background-size: cover;
+  background: url('images/background.jpg') no-repeat top center fixed;
+  /*background-size: contain;*/
   overflow: hidden;
   padding-top: 60px;
 }
@@ -78,7 +77,8 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+   -webkit-animation: pulse 0.5s;
+    animation: pulse 0.5s; 
 }
 .tag {
   background-color: #efefef;
@@ -109,6 +109,12 @@ header .profile-image:hover {
 .card:hover {
   border-color: #FF9D00;
 }
+.card a {
+  color: #FF9D00;  
+}
+.card a:hover {
+  text-decoration: underline; 
+}
 
 ul.skills {
   padding: 0;
@@ -131,6 +137,11 @@ ul.skills {
 
 .skills li:nth-child(odd) {
   background: #5f9ab8;
+}
+/*img styles*/
+img {
+  max-width: 100%;
+
 }
 
 footer {
@@ -180,6 +191,37 @@ a.social:hover {
   clear: both;
 }
 
+/*HOME PAGE*/
+section.experience {
+  width: 100%;
+  height: 200px;
+  background: url('images/waves.jpg') no-repeat top center fixed;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.section h2 {
+  color: white;
+}
+.overlay {
+  background-color: rgba(95, 154, 184, 0.3);
+  height: 100%;
+  width: 100%;
+}
+
+/*BUTTON*/
+.button {
+  background-color: Orange;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-weight: 700;
+}
+a.button:hover {
+  color: white;
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
@@ -218,4 +260,6 @@ a.social:hover {
   }
 
 }
+
+
 
